@@ -1,0 +1,21 @@
+.hamburger {
+  position: relative;
+  width: 18px;
+  height: 10px;
+  outline:none;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 18px;
+    height: 2px;
+    background-color: #000000;
+    text-decoration: none;
+    box-shadow: 0 4px 0 #000000,
+                0 8px 0 #000000;
+    content: "";
+  }
+}
