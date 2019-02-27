@@ -1,0 +1,88 @@
+.modal-login-form {
+  padding: 0;
+  margin: 0;
+}
+
+.modal-login-form__title {
+  margin-bottom: 60px;
+  font-size: 40px;
+  line-height: 40px;
+  color: #1a1a1a;
+}
+
+.modal-login-form__group {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+
+  &:nth-of-type(3) {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 37px;
+
+    .modal-login-form__label {
+      margin-bottom: 0;
+      margin-left: 15px;
+
+      &:hover {
+        color: #4d4d4d;
+      }
+    }
+  }
+}
+
+.modal-login-form__label {
+  margin-bottom: 10px;
+  font-family: @font-family-second;
+  font-size: 16px;
+  line-height: 16px;
+  color: #1a1a1a;
+}
+
+.modal-login-form__input {
+  min-height: 50px;
+  padding: 15px 15px 15px 14px;
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 16px;
+  color: #4d4d4d;
+  outline: none;
+  border: 1px solid rgba(0,0,0,0.4);
+  background-color: #ffffff;
+
+  &:invalid {
+    border-color: #ff0000;
+  }
+}
+
+.modal-login-form__footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+
+  span {
+    margin-right: auto;
+    font-size: 14px;
+    line-height: 14px;
+    font-family: @font-family-second;
+    color: #999999;
+  }
+}
+
+.modal-login-form__link {
+  font-family: @font-family-second;
+  font-size: 14px;
+  line-height: 14px;
+  color: #376d95;
+  text-decoration: none;
+
+  &:last-child {
+    margin-left: 18px;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

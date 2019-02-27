@@ -13,7 +13,7 @@
         <div class="page-header__top-inner">
           <nav class="page-header__top-menu">
             <a href="#" class="page-header__top-link">Подпишись</a>
-            <a href="#" class="page-header__top-link">
+            <a href="#modallogin" class="page-header__top-link">
               <svg width="12" height="13"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-login"></use></svg>
               Войти
             </a>
@@ -214,6 +214,33 @@
         </div>
       </div>
     </footer>
+    <div class="modal-login" id="modallogin">
+      <form class="modal-login-form" action="/echo" method="post">
+        <h3 class="modal-login-form__title">Войти</h3>
+        <div class="modal-login-form__group">
+          <label class="modal-login-form__label" for="email">Ваш e-mail</label>
+          <input class="modal-login-form__input" type="email" id="email" required>
+        </div>
+        <div class="modal-login-form__group">
+          <label class="modal-login-form__label" for="password">Пароль</label>
+          <input class="modal-login-form__input" type="password" id="password" required>
+        </div>
+        <div class="modal-login-form__group">
+          <input type="checkbox" id="rememberme">
+          <label class="modal-login-form__label" for="rememberme">Запомнить меня</label>
+        </div>
+        <input class="btn btn--modal-login" type="submit" value="Войти">
+        <div class="modal-login-form__footer">
+          <span>У вас нет аккаунта?</span>
+          <a class="modal-login-form__link" href="#">Создать аккаунт</a>
+          <a class="modal-login-form__link"href="#">Подписаться</a>
+        </div>
+      </form>
+      <button class="modal-login__close">
+        <svg width="12" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use></svg>
+      </button>
+    </div>
+    <div class="page-wrapper__overlay"></div>
   </div>
   <svg style="display:none" xmlns="http://www.w3.org/2000/svg">
     <symbol id="icon-login" width="12" height="13" viewBox="0 0 12 13">
@@ -225,6 +252,9 @@
     </symbol>
     <symbol id="icon-scrollup" width="9" height="7" viewBox="0 0 9 7">
       <path d="M8.83303 5.86455C8.94437 5.75327 9 5.62139 9 5.46907C9 5.31672 8.94437 5.18484 8.83303 5.07355L4.89553 1.13609C4.78418 1.0248 4.6524 0.969116 4.50005 0.969116C4.3477 0.969116 4.21582 1.0248 4.10456 1.13609L0.167067 5.07355C0.0557211 5.18481 -2.78466e-05 5.31669 -2.78533e-05 5.46907C-2.78599e-05 5.62139 0.0557211 5.75327 0.167067 5.86455C0.278321 5.9759 0.4102 6.03162 0.56255 6.03162L8.43754 6.03162C8.58989 6.03159 8.72165 5.9759 8.83303 5.86455Z" fill="#A5A5A5"/>
+    </symbol>
+    <symbol id="icon-close" width="12" height="12" viewBox="0 0 12 12">
+      <path d="M7.06127 5.99987L11.7801 1.28102C12.0733 0.988097 12.0733 0.51281 11.7801 0.219883C11.4869 -0.0732943 11.0122 -0.0732943 10.719 0.219883L6.00012 4.93873L1.28102 0.219883C0.987847 -0.0732943 0.51306 -0.0732943 0.219883 0.219883C-0.0732943 0.51281 -0.0732943 0.988097 0.219883 1.28102L4.93898 5.99987L0.219883 10.7187C-0.0732943 11.0117 -0.0732943 11.4869 0.219883 11.7799C0.366471 11.9262 0.558587 11.9995 0.750453 11.9995C0.942319 11.9995 1.13444 11.9262 1.28102 11.7796L6.00012 7.06076L10.719 11.7796C10.8656 11.9262 11.0577 11.9995 11.2495 11.9995C11.4414 11.9995 11.6335 11.9262 11.7801 11.7796C12.0733 11.4867 12.0733 11.0114 11.7801 10.7185L7.06127 5.99987Z" fill="#1A1A1A"/>
     </symbol>
   </svg>
 </body>

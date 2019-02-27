@@ -1,0 +1,40 @@
+.modal-login {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 815px;
+  padding: 53px 107px 70px 107px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  z-index: 3;
+
+  &:target {
+    display: block;
+  }
+
+  &:target {
+    + .page-wrapper__overlay {
+      display: block;
+    }
+  }
+}
+
+.modal-login__close {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  display: block;
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  outline: none;
+  border: 0;
+
+  svg {
+    vertical-align: middle;
+  }
+}
