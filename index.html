@@ -8,10 +8,27 @@
 </head>
 <body>
   <div class="page-wrapper">
-    <header class="page-header">
+    <header class="page-header" id="header">
+      <div class="page-header__top-header">
+        <div class="page-header__top-inner">
+          <nav class="page-header__top-menu">
+            <a href="#" class="page-header__top-link">Подпишись</a>
+            <a href="#" class="page-header__top-link">
+              <svg width="12" height="13"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-login"></use></svg>
+              Войти
+            </a>
+            <a href="#" class="page-header__top-link">Создать аккаунт</a>
+            <a href="#" class="page-header__top-link">Подписка</a>
+          </nav>
+        </div>
+      </div>
       <div class="page-header__inner">
         <a class="logo" href=#>
-          <img src="img/logo-mobile.png" alt="Логотип">
+          <picture>
+            <source media="(min-width: 1920px)" srcset="img/logo-desktop.png">
+            <source media="(min-width: 1020px)" srcset="img/logo-mobile.png">
+            <img src="img/logo-mobile.png" alt="Логотип">
+          </picture>
         </a>
         <ul class="menu">
           <li class="menu__item menu__item--search">
@@ -26,7 +43,9 @@
           <li class="menu__item"><a href="#" class="menu__link">Личность</a></li>
           <li class="menu__item"><a href="#" class="menu__link">Видео</a></li>
         </ul>
-        <div class="login"></div>
+        <a class="page-header__login" href="#">
+          <svg width="12" height="13"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-login"></use></svg>
+        </a>
         <button class="hamburger"></button>
       </div>
     </header>
@@ -126,7 +145,7 @@
       </div>
       <div class="scroll-up">
         <svg width="9" height="7"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-scrollup"></use></svg>
-        <a class="scroll-up__link" href="#">Вернуться наверх</a>
+        <a class="scroll-up__link" href="#header">Вернуться наверх</a>
       </div>
     </main>
     <footer class="page-footer">

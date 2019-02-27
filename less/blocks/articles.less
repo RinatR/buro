@@ -10,5 +10,31 @@
     justify-content: flex-start;
     margin-bottom: 61px;
   }
+
+  .articles__inner {
+    .article {
+      &:first-child,
+      &:nth-child(2) {
+        width: 364px;
+      }
+    }
+  }
+}
+
+@media @desktop-width {
+  .articles {
+    width: 892px;
+    padding-right: 20px;
+    margin-right: 20px;
+    border-right: 1px solid #e2e2e2;
+  }
+  .articles__inner {
+    .article {
+      &:first-child,
+      &:nth-child(2) {
+        width: 330px;
+      }
+    }
+  }
 }
 
