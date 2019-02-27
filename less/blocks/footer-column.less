@@ -1,5 +1,6 @@
 .footer-column {
   width: 50%;
+  box-sizing: border-box;
 }
 
 .footer-column__name {
@@ -23,6 +24,15 @@
   color: #376D95;
   &:hover {
     text-decoration: underline;
+  }
+}
+
+@media @tablet-width {
+  .footer-column {
+   &--bordered {
+    padding-left: 15px;
+    border-left: 1px solid #e2e2e2;
+   }
   }
 }
 

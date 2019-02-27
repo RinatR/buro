@@ -1,8 +1,28 @@
 .scroll-up {
+  position: relative;
   padding: 19px 0;
 
+  &:before {
+    position: absolute;
+    top: 0;
+    left: -15px;
+    width: 320px;
+    height: 1px;
+    background-color: #e2e2e2;
+    content: "";
+  }
+  &:after {
+    position: absolute;
+    bottom: 0;
+    left: -15px;
+    width: 320px;
+    height: 1px;
+    background-color: #e2e2e2;
+    content: "";
+  }
 }
 .scroll-up__link {
+  margin-left: 6px;
   font-family: @font-family-second;
   font-size: 12px;
   line-height: 12px;
@@ -10,7 +30,32 @@
   text-decoration: none;
   letter-spacing: 2px;
   color: #a5a5a5;
+
   &:hover {
     text-decoration: underline;
+  }
+}
+
+@media @tablet-width {
+  .scroll-up {
+    margin-bottom: 30px;
+    &:before {
+      position: absolute;
+      top: 0;
+      left: -30px;
+      width: 1020px;
+      height: 1px;
+      background-color: #e2e2e2;
+      content: "";
+    }
+    &:after {
+      position: absolute;
+      bottom: 0;
+      left: -30px;
+      width: 1020px;
+      height: 1px;
+      background-color: #e2e2e2;
+      content: "";
+    }
   }
 }
