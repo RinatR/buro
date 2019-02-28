@@ -1,14 +1,18 @@
 .menu {
-  // display: none;
+  display: none;
   position: absolute;
   top: 0;
-  right: 10px;
-  width: 100%;
+  right: -15px;
+  width: 320px;
   padding: 0;
   margin: 0;
   list-style: none;
   background-color: #ffffff;
-  z-index: 2;
+  z-index: 3;
+
+  &--opened {
+    display: block;
+  }
 }
 
 .menu__item {
@@ -110,8 +114,10 @@
 
 @media @tablet-width {
   .menu {
+    position: fixed;
     width: 320px;
     min-height: 598px;
+    right: 0px;
 
     &:after,
     &:before {
@@ -129,6 +135,7 @@
     justify-content: flex-start;
     width: 100%;
     min-height: 55px;
+    z-index: 1;
 
     &:after {
       display: block;
