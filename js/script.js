@@ -6,6 +6,7 @@ var body = document.querySelector("body");
 var modal = document.querySelector(".modal-login");
 var closeModal = document.querySelector(".modal-login__close");
 var logo = document.querySelector(".logo");
+var loginButton = document.querySelector(".page-header__top-link--login");
 
 // обработчик открытия меню
 hamburger.addEventListener("click", function(event) {
@@ -21,6 +22,13 @@ menuToggle.addEventListener("click", function(event) {
   menu.classList.remove("menu--opened");
   overlay.style.display = "none";
 });
+
+//обработчик открытия модального окна
+loginButton.addEventListener("click", function() {
+  modal.style.display = "block";
+  overlay.style.display = "block";
+});
+
 
 // обработчик закрытия модального окна
 closeModal.addEventListener("click", function() {
@@ -41,7 +49,7 @@ function fixedMenu() {
   window.onscroll = function() {
 
   var scrolled = window.pageYOffset || document.documentElement.scrollTop;
-  console.log(scrolled)
+
     if(scrolled > 228) {
       menu.style.position = "fixed";
       menu.style.borderBottom = "1px solid #e2e2e2";

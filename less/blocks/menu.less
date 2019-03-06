@@ -1,8 +1,8 @@
 .menu {
   position: fixed;
   top: 0;
-  right: -320px;
-  width: 320px;
+  right: -100%;
+  width: 100%;
   padding: 0;
   margin: 0;
   list-style: none;
@@ -25,20 +25,20 @@
   &--search {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
     position: relative;
     padding: 0;
     padding-left: 15px;
 
     input {
-      width: 249px;
+      flex-grow: 1;
       height: 57px;
       padding: 0;
-      padding-right: 55px;
       font-size: 15px;
       line-height: 15px;
       border: none;
-      border-right: 1px solid #e2e2e2;
       outline: none;
       box-sizing: border-box;
       background-color: #ffffff;
@@ -62,12 +62,16 @@
 }
 
 .menu__item-search-icon {
-  position: absolute;
-  top: 50%;
-  right: 76px;
-  width: 20px;
-  height: 20px;
-  transform: translateY(-50%);
+  width: 57px;
+  height: 57px;
+  padding: 0;
+  border: 0;
+  border-right: 1px solid #e2e2e2;
+  background-color: #ffffff;
+
+  svg {
+    vertical-align: middle;
+  }
 }
 
 .menu__link {
@@ -117,7 +121,8 @@
 }
 
 .menu__toggle {
-  flex-grow: 1;
+  width: 57px;
+  height: 57px;
   position: relative;
   padding: 0;
   border: 0;
@@ -260,6 +265,7 @@
     }
 
     &:hover {
+      color: #1a1a1a;
       padding-left: 15px;
     }
   }
